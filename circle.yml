@@ -1,6 +1,11 @@
 machine:
-  node:
-    version: 0.10.42
+  services:
+    - docker
+dependencies:
+  override:
+    - docker build -t dev-image .
 test:
   override:
     - ./node_modules/.bin/mocha
+    - docker run -d -p 3000:3000 dev-image; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:3000
