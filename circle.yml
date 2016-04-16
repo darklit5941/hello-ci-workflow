@@ -1,7 +1,6 @@
 machine:
   node:
     version: 0.10.42
-
-dependencies:
-  pre:
-    - yum install -y npm
+test:
+  override:
+    - ./node_modules/.bin/mocha
