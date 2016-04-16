@@ -1,0 +1,17 @@
+{
+  "name": "hello-ci-workflow",
+  "version": "0.0.0",
+  "description": "exceltant",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~4.13.4"
+  },
+  "devDependencies": {
+    "mocha": "~2.4.5"
+  }
+}
